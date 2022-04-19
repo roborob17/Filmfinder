@@ -61,11 +61,11 @@ radios.forEach(radio => radio.addEventListener('change', (e) => {
                 getMovieUl.appendChild(newLi.cloneNode(x));
                 newLi.appendChild(newA);
                 newA.setAttribute("target", "blank");
-                newA.setAttribute("id" , getLatestMovies[i].title)
-                newA.setAttribute("year" , getLatestMovies[i].year)
-                newA.setAttribute("type" , getLatestMovies[i].type)
+                newA.setAttribute("id" , getLatestMovies[i].title);
+                newA.setAttribute("year" , getLatestMovies[i].year);
+                newA.setAttribute("type" , getLatestMovies[i].type);
                 newA.setAttribute("href" , (y + getLatestMovies[i].imdbID));
-                newA.appendChild(newImg)
+                newA.appendChild(newImg);
                 newImg.setAttribute("src", getLatestMovies[i].poster);
                 x = true;
                 } 
@@ -77,9 +77,9 @@ radios.forEach(radio => radio.addEventListener('change', (e) => {
                 getMovieUl.appendChild(newLi.cloneNode(x));
                 newLi.appendChild(newA);
                 newA.setAttribute("target", "blank");
-                newA.setAttribute("id" , getAvengerMovies[i].title)
-                newA.setAttribute("year" , getAvengerMovies[i].year)
-                newA.setAttribute("type" , getAvengerMovies[i].type)
+                newA.setAttribute("id" , getAvengerMovies[i].title);
+                newA.setAttribute("year" , getAvengerMovies[i].year);
+                newA.setAttribute("type" , getAvengerMovies[i].type);
                 newA.setAttribute("href" , (y + getAvengerMovies[i].imdbID));
                 newA.appendChild(newImg);
                 newImg.setAttribute( "src", getAvengerMovies[i].poster);
@@ -93,9 +93,9 @@ radios.forEach(radio => radio.addEventListener('change', (e) => {
                 getMovieUl.appendChild(newLi.cloneNode(x));
                 newLi.appendChild(newA);
                 newA.setAttribute("target", "blank");
-                newA.setAttribute("id" , getXMenMovies[i].title)
-                newA.setAttribute("year" , getXMenMovies[i].year)
-                newA.setAttribute("type" , getXMenMovies[i].type)
+                newA.setAttribute("id" , getXMenMovies[i].title);
+                newA.setAttribute("year" , getXMenMovies[i].year);
+                newA.setAttribute("type" , getXMenMovies[i].type);
                 newA.setAttribute("href" , (y + getXMenMovies[i].imdbID));
                 newA.appendChild(newImg);
                 newImg.setAttribute( "src", getXMenMovies[i].poster);
@@ -109,9 +109,9 @@ radios.forEach(radio => radio.addEventListener('change', (e) => {
             getMovieUl.appendChild(newLi.cloneNode(x));
             newLi.appendChild(newA);
             newA.setAttribute("target", "blank");
-            newA.setAttribute("id" , getPrincessMovies[i].title)
-            newA.setAttribute("year" , getPrincessMovies[i].year)
-            newA.setAttribute("type" , getPrincessMovies[i].type)
+            newA.setAttribute("id" , getPrincessMovies[i].title);
+            newA.setAttribute("year" , getPrincessMovies[i].year);
+            newA.setAttribute("type" , getPrincessMovies[i].type);
             newA.setAttribute("href" , (y + getPrincessMovies[i].imdbID));
             newA.appendChild(newImg);
             newImg.setAttribute( "src", getPrincessMovies[i].poster);
@@ -125,9 +125,9 @@ radios.forEach(radio => radio.addEventListener('change', (e) => {
                 getMovieUl.appendChild(newLi.cloneNode(x));
                 newLi.appendChild(newA);
                 newA.setAttribute("target", "blank");
-                newA.setAttribute("id" , getBatmanMovies[i].title)
-                newA.setAttribute("year" , getBatmanMovies[i].year)
-                newA.setAttribute("type" , getBatmanMovies[i].type)
+                newA.setAttribute("id" , getBatmanMovies[i].title);
+                newA.setAttribute("year" , getBatmanMovies[i].year);
+                newA.setAttribute("type" , getBatmanMovies[i].type);
                 newA.setAttribute("href" , (y + getBatmanMovies[i].imdbID));
                 newA.appendChild(newImg);
                 newImg.setAttribute( "src", getBatmanMovies[i].poster);
@@ -147,9 +147,9 @@ function loadMovies () {
         getAllMovies.appendChild(newLi.cloneNode(true));
         newLi.appendChild(newA);
         newA.setAttribute("target", "blank");
-        newA.setAttribute("id" , movies[i].title)
-        newA.setAttribute("year" , movies[i].year)
-        newA.setAttribute("type" , movies[i].type)
+        newA.setAttribute("id" , movies[i].title);
+        newA.setAttribute("year" , movies[i].year);
+        newA.setAttribute("type" , movies[i].type);
         newA.setAttribute("href" , (y + movies[i].imdbID));
         newA.appendChild(newImg);
         newImg.setAttribute( "src", movies[i].poster);
@@ -167,14 +167,14 @@ function loadLatestMovies () {
                 getMovieUl.appendChild(newLi.cloneNode(x));
                 newLi.appendChild(newA);
                 newA.setAttribute("target", "blank");
-                newA.setAttribute("id" , getLatestMovies[i].title)
-                newA.setAttribute("year" , getLatestMovies[i].year)
-                newA.setAttribute("type" , getLatestMovies[i].type)
+                newA.setAttribute("id" , getLatestMovies[i].title);
+                newA.setAttribute("year" , getLatestMovies[i].year);
+                newA.setAttribute("type" , getLatestMovies[i].type);
                 newA.setAttribute("href" , (y + getLatestMovies[i].imdbID));
-                                newA.appendChild(newImg)
+                                newA.appendChild(newImg);
                 newImg.setAttribute("src", getLatestMovies[i].poster);
                 x = true;
-                console.log(getLatestMovies[i])
+                console.log(getLatestMovies[i]);
                 }
 };
 
