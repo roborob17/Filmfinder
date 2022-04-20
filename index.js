@@ -10,7 +10,6 @@ const getAvengerMovies = movies.filter(movie => movie.title.includes ("avengers"
 const getXMenMovies = movies.filter(movie => movie.title.includes ("x-men"));
 const getPrincessMovies = movies.filter(movie => movie.title.includes ("princess"));
 const getBatmanMovies = movies.filter(movie => movie.title.includes ("batman"));
-
 const getAllMovies = document.getElementById("allMovies");
 const getMovieUl = document.getElementById('movies');
 const newLi = document.createElement("li");
@@ -32,7 +31,7 @@ getSearchbar.addEventListener("keyup", (e) => {
     console.log(filteredMovies)
     getMovieUl.innerHTML = '';
     let x = false;
-    for (i = 0; i <= filteredMovies.length ; i++) {
+    for (i = 0; i < filteredMovies.length ; i++) {
         getMovieUl.appendChild(newLi.cloneNode(x));
         newLi.appendChild(newA);
         newA.setAttribute("target", "blank");
@@ -56,8 +55,8 @@ radios.forEach(radio => radio.addEventListener('change', (e) => {
     switch(targetId){
         case "latest-movies": 
             getMovieUl.innerHTML = '';
-            for (i = 0; i <= getLatestMovies.length; i++) {
-                if ( i <= getLatestMovies.length ) {
+            for (i = 0; i < getLatestMovies.length; i++) {
+                if ( i < getLatestMovies.length ) {
                 getMovieUl.appendChild(newLi.cloneNode(x));
                 newLi.appendChild(newA);
                 newA.setAttribute("target", "blank");
@@ -73,7 +72,7 @@ radios.forEach(radio => radio.addEventListener('change', (e) => {
         break;
         case "avenger":
             getMovieUl.innerHTML = '';
-            for (let i = 0; i <= getAvengerMovies.length; i++){
+            for (let i = 0; i < getAvengerMovies.length; i++){
                 getMovieUl.appendChild(newLi.cloneNode(x));
                 newLi.appendChild(newA);
                 newA.setAttribute("target", "blank");
@@ -89,7 +88,7 @@ radios.forEach(radio => radio.addEventListener('change', (e) => {
         break;
         case "x-men":
             getMovieUl.innerHTML = '';
-            for (let i = 0; i <= getXMenMovies.length; i++){
+            for (let i = 0; i < getXMenMovies.length; i++){
                 getMovieUl.appendChild(newLi.cloneNode(x));
                 newLi.appendChild(newA);
                 newA.setAttribute("target", "blank");
@@ -105,7 +104,7 @@ radios.forEach(radio => radio.addEventListener('change', (e) => {
         break;
         case "princess":            
         getMovieUl.innerHTML = '';
-        for (let i = 0; i <= getPrincessMovies.length; i++){
+        for (let i = 0; i < getPrincessMovies.length; i++){
             getMovieUl.appendChild(newLi.cloneNode(x));
             newLi.appendChild(newA);
             newA.setAttribute("target", "blank");
@@ -121,7 +120,7 @@ radios.forEach(radio => radio.addEventListener('change', (e) => {
         break;
         case "batman":
             getMovieUl.innerHTML = '';
-            for (let i = 0; i <= getBatmanMovies.length; i++){
+            for (let i = 0; i < getBatmanMovies.length; i++){
                 getMovieUl.appendChild(newLi.cloneNode(x));
                 newLi.appendChild(newA);
                 newA.setAttribute("target", "blank");
@@ -143,7 +142,7 @@ radios.forEach(radio => radio.addEventListener('change', (e) => {
 // This code creates the startpageview for all movies in the body section.
 
 function loadMovies () {
-    for (let i = 0; i <= movies.length; i++){
+    for (let i = 0; i < movies.length; i++){
         getAllMovies.appendChild(newLi.cloneNode(true));
         newLi.appendChild(newA);
         newA.setAttribute("target", "blank");
@@ -163,7 +162,7 @@ console.log(loadMovies());
 function loadLatestMovies () {
     getMovieUl.innerHTML = '';
     let x = false;
-            for (i = 0; i <= getLatestMovies.length ; i++) {
+            for (i = 0; i < getLatestMovies.length ; i++) {
                 getMovieUl.appendChild(newLi.cloneNode(x));
                 newLi.appendChild(newA);
                 newA.setAttribute("target", "blank");
@@ -171,11 +170,10 @@ function loadLatestMovies () {
                 newA.setAttribute("year" , getLatestMovies[i].year);
                 newA.setAttribute("type" , getLatestMovies[i].type);
                 newA.setAttribute("href" , (y + getLatestMovies[i].imdbID));
-                                newA.appendChild(newImg);
+                newA.appendChild(newImg);
                 newImg.setAttribute("src", getLatestMovies[i].poster);
                 x = true;
-                console.log(getLatestMovies[i]);
-                }
+     }
 };
 
 console.log(loadLatestMovies());
